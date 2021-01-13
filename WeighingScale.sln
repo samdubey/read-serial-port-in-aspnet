@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeighingScale", "WeighingScale\WeighingScale.csproj", "{A69F3C8F-AF06-4503-AFC6-5AA3D9DF7ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeighingScale.Tests", "WeighingScale.Tests\WeighingScale.Tests.csproj", "{17BEB836-2740-4902-8B05-C3235D3414D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A69F3C8F-AF06-4503-AFC6-5AA3D9DF7ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69F3C8F-AF06-4503-AFC6-5AA3D9DF7ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69F3C8F-AF06-4503-AFC6-5AA3D9DF7ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69F3C8F-AF06-4503-AFC6-5AA3D9DF7ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17BEB836-2740-4902-8B05-C3235D3414D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BEB836-2740-4902-8B05-C3235D3414D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BEB836-2740-4902-8B05-C3235D3414D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BEB836-2740-4902-8B05-C3235D3414D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {225748CD-4071-41BD-A63B-EB33F86855A2}
+	EndGlobalSection
+EndGlobal
