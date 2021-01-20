@@ -21,28 +21,34 @@ namespace WeighingScale.Controllers
         {
             if (boudRate == 0)
                 boudRate = 2400;
-
-            using (MySerialPortClass mySerialPortClass
-                = new MySerialPortClass(comPort, boudRate))
+            try
             {
-                if (mySerialPortClass.Open)
+                using (MySerialPortClass mySerialPortClass
+                    = new MySerialPortClass(comPort, boudRate))
                 {
-                    string portData = mySerialPortClass.ReadExisting();
-                    if (!string.IsNullOrEmpty(portData))
+                    if (mySerialPortClass.Open)
                     {
-                        string resultString = Regex.Match(portData, @"\d+").Value;
-                        long resultLong = Convert.ToInt64(resultString);
-                        return resultLong;
+                        string portData = mySerialPortClass.ReadExisting();
+                        if (!string.IsNullOrEmpty(portData))
+                        {
+                            string resultString = Regex.Match(portData, @"\d+").Value;
+                            long resultLong = Convert.ToInt64(resultString);
+                            return resultLong;
+                        }
+                        else
+                        {
+                            return 0;
+                        }
                     }
                     else
                     {
                         return 0;
                     }
                 }
-                else
-                {
-                    return 0;
-                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
     }
