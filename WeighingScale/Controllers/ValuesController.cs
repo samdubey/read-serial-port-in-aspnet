@@ -17,10 +17,13 @@ namespace WeighingScale.Controllers
         }
 
         // GET api/values/5
-        public long Get(string comPort)
+        public long Get(string comPort, int boudRate)
         {
+            if (boudRate == 0)
+                boudRate = 2400;
+
             MySerialPortClass mySerialPortClass
-                = new MySerialPortClass(comPort, 2400);
+                = new MySerialPortClass(comPort, boudRate);
             if (mySerialPortClass.Open)
             {
                 string portData = mySerialPortClass.ReadExisting();
