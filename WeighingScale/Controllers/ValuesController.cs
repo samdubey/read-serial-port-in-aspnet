@@ -19,8 +19,6 @@ namespace WeighingScale.Controllers
         // GET api/values/5
         public long Get(string comPort, int boudRate)
         {
-            if (boudRate == 0)
-                boudRate = 2400;
             try
             {
                 using (MySerialPortClass mySerialPortClass
@@ -37,18 +35,18 @@ namespace WeighingScale.Controllers
                         }
                         else
                         {
-                            return 0;
+                            return -1;
                         }
                     }
                     else
                     {
-                        return 0;
+                        return -1;
                     }
                 }
             }
             catch (Exception ex)
             {
-                return 0;
+                return -1;
             }
         }
     }
