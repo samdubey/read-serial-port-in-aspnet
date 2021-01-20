@@ -17,13 +17,13 @@ namespace WeighingScale.Controllers
         }
 
         // GET api/values/5
-        public long Get(int portNumber)
+        public long Get(string comPort)
         {
             MySerialPortClass mySerialPortClass
-                = new MySerialPortClass("100", 2400);
+                = new MySerialPortClass(comPort, 2400);
             if (mySerialPortClass.Open)
             {
-                string portData = mySerialPortClass.ReadLine();
+                string portData = mySerialPortClass.ReadExisting();
                 if (!string.IsNullOrEmpty(portData))
                 {
                     string resultString = Regex.Match(portData, @"\d+").Value;

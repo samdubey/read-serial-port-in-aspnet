@@ -41,6 +41,7 @@
         public MySerialPortClass(string ComPort, int BaudRateValue = DefaultBaudRate, Parity Par = DefaultParityBit, int DataSize = DefaultSize, StopBits Stop = DefaultStopBits)
         {
             SerialPort = new SerialPort(ComPort, BaudRateValue, Par, DataSize, Stop);
+            OpenPort();
         }
         //after all the set up you must open the port. If the port is in use you
         //will get an exception and you may need to rest it or your computer to
